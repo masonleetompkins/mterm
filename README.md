@@ -24,25 +24,48 @@ git status
 
 Renders as markdown with a `Run ▶` button. Nothing executes until you click it.
 
-### install — one file, one click (macOS / Linux / Windows)
+### install
 
-**Best — polyglot installer (no Rust needed):**
+**1. Pick your file — download from [Releases](https://github.com/masonleetompkins/mterm/releases/latest):**
+
+| Your OS | Download this file | What it is |
+| :--- | :--- | :--- |
+| **Linux** | [`install.md`](https://github.com/masonleetompkins/mterm/releases/latest/download/install.md) | shell + markdown polyglot |
+| **macOS** | [`install.md`](https://github.com/masonleetompkins/mterm/releases/latest/download/install.md) | same file, detects macOS |
+| **Windows** | [`install.ps1.md`](https://github.com/masonleetompkins/mterm/releases/latest/download/install.ps1.md) | PowerShell + markdown polyglot |
+
+> The installer *is* an `mterm` file. Double-click it after install, or open it with `mterm`, and it shows a `[Install mterm now]` button.
+
+**2. Run it from terminal/shell:**
 
 ```bash
-# macOS / Linux
-sh install.md              # detects OS/arch -> ~/.local/bin/mterm
-sh install.md --dry-run    # preview
+# Linux — any distro
+sh install.md                    # installs to ~/.local/bin/mterm
+sh install.md --dry-run          # preview without installing
 
-# Windows (PowerShell)
+# macOS — Intel or Apple Silicon
+sh install.md
+sh install.md --dry-run
+
+# Windows — PowerShell (no admin)
 powershell -ExecutionPolicy Bypass -File install.ps1.md
 powershell -ExecutionPolicy Bypass -File install.ps1.md --dry-run
 ```
 
-The installer *is* an `mterm` file — open `install.md` / `install.ps1.md` in `mterm` and click `[Install mterm now]`, or run with `sh`/`powershell`. No Rust needed.
-
-**Alternatives:**
+Add to PATH if prompted:
 ```bash
-cargo install --git https://github.com/<org>/mterm
+# Linux/macOS
+export PATH="$HOME/.local/bin:$PATH"   # add to ~/.bashrc or ~/.zshrc
+
+# Windows PowerShell (current session)
+$env:PATH += ";$env:USERPROFILE\.local\bin"
+# Windows PowerShell (permanent)
+setx PATH "$env:PATH;$env:USERPROFILE\.local\bin"
+```
+
+**Alternatives (no installer):**
+```bash
+cargo install --git https://github.com/masonleetompkins/mterm
 # or download binary directly from Releases:
 # mterm-linux-x64, mterm-linux-arm64, mterm-macos-x64, mterm-macos-arm64, mterm-windows-x64.exe
 ```
