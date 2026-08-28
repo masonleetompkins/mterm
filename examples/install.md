@@ -88,9 +88,9 @@ mterm:
 
 # Install mterm
 
-This file *is* the installer.
+> **Don't have mterm yet?** You won't see buttons. Open a terminal and run `sh install.md` (or `sh examples/install.md` if you cloned the repo). After install, reopen this file with `mterm app install.md` to get clickable buttons.
 
-**How to install — pick one:**
+**If you have mterm — click to run:**
 
 > [!BUTTON] Install mterm now
 
@@ -102,6 +102,13 @@ sh examples/install.md
 
 ```sh :run id=dry
 sh examples/install.md --dry-run
+```
+
+**If you don't have mterm — run in terminal:**
+
+```bash
+cd ~/Downloads   # or repo root if cloned
+sh install.md
 ```
 
 **What it does:**

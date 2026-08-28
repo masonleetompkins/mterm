@@ -69,9 +69,9 @@ mterm:
 
 # Install mterm — Windows
 
-This file *is* the installer.
+> **Don't have mterm yet?** You won't see buttons. Open PowerShell and run `powershell -ExecutionPolicy Bypass -File install.ps1.md`. After install, reopen with `mterm app install.ps1.md` to get clickable buttons.
 
-**How to install — pick one:**
+**If you have mterm — click to run:**
 
 > [!BUTTON] Install mterm now (Windows)
 
@@ -83,6 +83,13 @@ powershell -ExecutionPolicy Bypass -File examples/install.ps1.md
 
 ```ps1 :run id=dry-win
 powershell -ExecutionPolicy Bypass -File examples/install.ps1.md --dry-run
+```
+
+**If you don't have mterm — run in PowerShell:**
+
+```powershell
+cd $HOME\Downloads
+powershell -ExecutionPolicy Bypass -File install.ps1.md
 ```
 
 **What it does:**
