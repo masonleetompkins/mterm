@@ -78,9 +78,9 @@ Plain `cat`, `nvim`, or GitHub preview still shows readable markdown.
 
 | Your OS | File | Double-click |
 | :--- | :--- | :--- |
-| **Linux** | [`install.sh`](https://github.com/masonleetompkins/mterm/releases/latest/download/install.sh) | File manager → right-click `install.sh` → `Run` / `Run in Terminal` |
-| **macOS** | [`install.command`](https://github.com/masonleetompkins/mterm/releases/latest/download/install.command) | Double-click `install.command` → Terminal opens and installs |
-| **Windows** | [`install.bat`](https://github.com/masonleetompkins/mterm/releases/latest/download/install.bat) | Double-click `install.bat` → `cmd` window installs |
+| **Linux** | [`mterm-V0.0.1-install.sh`](https://github.com/masonleetompkins/mterm/releases/latest/download/mterm-V0.0.1-install.sh) | File manager → right-click `mterm-V0.0.1-install.sh` → `Run` / `Run in Terminal` |
+| **macOS** | [`mterm-V0.0.1-install.command`](https://github.com/masonleetompkins/mterm/releases/latest/download/mterm-V0.0.1-install.command) | Double-click `mterm-V0.0.1-install.command` → Terminal opens and installs |
+| **Windows** | [`mterm-V0.0.1-install.bat`](https://github.com/masonleetompkins/mterm/releases/latest/download/mterm-V0.0.1-install.bat) | Double-click `mterm-V0.0.1-install.bat` → `cmd` window installs |
 
 Installs to `~/.local/bin/mterm` (Linux/macOS) or `%USERPROFILE%\.local\bin\mterm.exe` (Windows). No admin.
 
@@ -90,11 +90,11 @@ Installs to `~/.local/bin/mterm` (Linux/macOS) or `%USERPROFILE%\.local\bin\mter
 
 ```bash
 # Linux / macOS
-sh install.sh --dry-run   # preview
-sh install.sh             # or: sh install.command
+sh mterm-V0.0.1-install.sh --dry-run   # preview
+sh mterm-V0.0.1-install.sh             # or: sh mterm-V0.0.1-install.command
 
 # Windows
-install.bat --dry-run
+mterm-V0.0.1-install.bat --dry-run
 ```
 
 **Verify:**
