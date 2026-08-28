@@ -65,6 +65,20 @@ jobs:
           name: ${{ matrix.artifact }}
           path: ${{ matrix.artifact }}
 
+  # ensure installers are attached to release
+  installers:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/upload-artifact@v4
+        with:
+          name: install.md
+          path: examples/install.md
+      - uses: actions/upload-artifact@v4
+        with:
+          name: install.ps1.md
+          path: examples/install.ps1.md
+
   release:
     needs: build
     runs-on: ubuntu-latest
